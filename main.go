@@ -14,8 +14,7 @@ import (
 
 func main() {
 
-	prod := os.Getenv("PROD")
-	if prod == "" || prod != "true" {
+	if os.Getenv("PROD") != "true" {
 		err := godotenv.Load()
 		if err != nil {
 			log.Fatal("Error loading .env file")
