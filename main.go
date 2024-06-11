@@ -1,29 +1,35 @@
 package main
 
 import (
-	"net/http"
+	"fmt"
+	"golang-hexagonal/database"
+	"log"
 	"os"
 
-	"github.com/gin-gonic/gin"
+	"golang-hexagonal/routes"
+
+	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
 )
 
 func main() {
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
+
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
 	}
 
-	r := gin.Default()
+	port := os.Getenv("PORT")
 
-	r.GET(
-		"/", func(c *gin.Context) {
-			c.JSON(
-				http.StatusOK, gin.H{
-					"message": "Welcome, this is a basic gin (https://github.com/gin-gonic/gin) server deployed on Zeabur (https://zeabur.com)",
-				},
-			)
-		},
-	)
+	db := database.Connect()
+	defer db.Close()
+
+	if shouldRunMigrations := os.Getenv("RUN_MIGRATIONS"); shouldRunMigrations == "true" {
+		fmt.Printf("Running migrations\n")
+		RunMigrations(db)
+	}
+
+	r := routes.SetupRouter(db)
 
 	panic(r.Run(":" + port))
 }
