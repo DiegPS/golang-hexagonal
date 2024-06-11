@@ -31,3 +31,11 @@ RUN_MIGRATIONS=true
 ```
 
 En ese ejemplo, el usuario se llama `postgres` la contraseña es `1234` y el nombre de la bases de datos es `car_database` pero logicamente puedes colocar los nombres que tu desees, tambien tenemos correr migraciones por defecto en true, pero una vez las hayas creado te recomiendo que lo pases a false.
+
+### Estructura de la aplicación
+
+![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/7f6f64d0-8ef9-4555-b353-b6dbc32a7419)
+
+
+
+
