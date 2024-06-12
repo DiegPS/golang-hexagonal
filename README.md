@@ -118,10 +118,22 @@ es decir puedes ir a tu navegador, y colocar la siguiente url `http://localhost:
 
 si deseas comprobar que la aplicacion funciona correctamente puedes hacer uso de la herramienta `Postman` o `Insomnia` para realizar las peticiones a los diferentes endpoints.
 
+### Testing en la aplicacion
 
+para el testing usamos una variable de entorno `.env.test` en donde tenemos un `DATABASE_URL` diferente al de desarrollo, ya que no queremos que los test afecten a la base de datos de desarrollo, por lo que creamos una base de datos de test.
 
+ejemplo de `.env.test`:
 
+```bash
+PORT=8080
+DATABASE_URL=postgresql://postgres:1234@localhost:5432/car_database_test?sslmode=disable
+RUN_MIGRATIONS=true
+```
 
+Para ejecutar los test de la aplicacion, necesitas ejecutar el siguiente comando en tu terminal:
 
+```bash
+go test ./...
+```
 
-
+Este comando deberia ser suficiente para que los test de la aplicacion se ejecuten correctamente, y puedas ver si la aplicacion funciona correctamente.
