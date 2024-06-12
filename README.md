@@ -24,6 +24,9 @@ Aqui se encuentran todos los endpoints que deben existir como se puede ver en la
 
 ![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/7e1ff56d-b341-4873-9989-30fc47e5710d)
 
+https://golang-hex.zeabur.app/
+en este enlace puedes probar la api con todos los endpoints solicitados.
+
 
 ### Recuerda crear un archivo `.env`
 
