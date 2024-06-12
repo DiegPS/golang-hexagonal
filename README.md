@@ -1,4 +1,4 @@
-# Backend Golang Hexagonal
+# Backend Golang
 
 ### Tecnologias Empleadas
 
