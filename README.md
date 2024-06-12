@@ -14,6 +14,11 @@ Un array que dentro contiene multiples objetos y a su ves estos tienen las sigui
 - y un "brand_name"
 ![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/68f02b44-8b9c-4279-b674-1690ce42b60c)
 
+### explicacion muy por encima de la app
+
+![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/4651a825-9053-4b9c-9f41-2aebbe1ac423)
+
+
 ### Endpoints de la Aplicación
 Aqui se encuentran todos los endpoints que deben existir como se puede ver en la imagen son los siguientes, GET */brands*, GET */brands/:id/models*, POST */brands*, POST */brands/:id/models*, PUT */models/:id* y GET */models*.
 
@@ -35,6 +40,13 @@ En ese ejemplo, el usuario se llama `postgres` la contraseña es `1234` y el nom
 ### Estructura de la aplicación
 
 ![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/7f6f64d0-8ef9-4555-b353-b6dbc32a7419)
+
+#### Desplegado en usando Serverless technologies
+
+Zeabur configurado para que despliegue todo en funciones empleando el `zbpack` que es una configuracion que permite realizar esto y evitar la necesidad de tener una maquina corriendo `24/7`, y `Neon` para desplegar PostgreSQL, de forma `serverless` sin la necesidad de pagar tanto en el caso de que no la estes usando.
+
+![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/46ecec85-1e96-4d06-944f-72528268f1e6)
+
 
 
 
