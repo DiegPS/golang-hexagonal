@@ -8,6 +8,9 @@
 - Gin Framework (Framework para Go)
 - PostgreSQL (Base de datos)
 
+![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/447d451f-8830-4d2b-9b75-01496c6683d4)
+
+
 Se emplea un archivo llamado `models.json` en el cual se encuentran los siguientes campos que ves en la imagen, `id`, `name`, `average_price` y `brand_name` que son los campos que se emplean en la aplicacion.
 
 ![image](https://github.com/DiegPS/golang-hexagonal/assets/88301232/68f02b44-8b9c-4279-b674-1690ce42b60c)
